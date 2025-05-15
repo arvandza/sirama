@@ -25,8 +25,8 @@ class AspirasiController extends Controller
     public function dashboard()
     {
         $totalAspirasi = AspirasiModel::count();
-        $totalAspirasiDisetujui = AspirasiModel::where('status', 'disetujui')->count();
-        $totalAspirasiDitolak = AspirasiModel::where('status', 'ditolak')->count();
+        $totalAspirasiDisetujui = RiwayatModel::where('status', 'disetujui')->count();
+        $totalAspirasiDitolak = RiwayatModel::where('status', 'ditolak')->count();
 
         return view('dashboard', compact('totalAspirasi', 'totalAspirasiDisetujui', 'totalAspirasiDitolak'));
     }

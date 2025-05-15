@@ -13,7 +13,7 @@
     <title>@yield('title')</title>
 </head>
 
-<body>
+<body class="bg-gray-100">
     @include('partials.header')
     @include('partials.sidebar')
 

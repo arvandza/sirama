@@ -23,3 +23,7 @@ Route::middleware(['auth.check'])->group(function () {
 
     Route::put('/aksi-aspirasi/{id}', [AspirasiController::class, 'acceptOrReject'])->name('aspirasi.aksi');
 });
+
+Route::get('/test', function () {
+    return view('test');
+});
